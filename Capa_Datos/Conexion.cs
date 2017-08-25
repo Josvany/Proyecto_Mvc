@@ -23,7 +23,7 @@ namespace Capa_Datos
         public static bool IniciarSesion(string locationBD)
         {
             GDatos = new SqlServer(locationBD);            
-            return GDatos.Autenticar(true);
+            return GDatos.Autenticar(true); 
         } 
 
         //mando a cerrar cesion
