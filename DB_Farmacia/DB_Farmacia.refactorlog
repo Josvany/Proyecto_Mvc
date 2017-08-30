@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c7f807dc-99d6-4cf3-bebf-1868d331acb4" ChangeDateTime="08/30/2017 03:11:27">
+    <Property Name="ElementName" Value="[dbo].[TBL_USER_INFO].[EMAIL]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_USER_INFO]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USE_EMAIL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="19f5d219-8202-4c33-baab-29e19f06c20e" ChangeDateTime="08/30/2017 03:11:48">
+    <Property Name="ElementName" Value="[dbo].[TBL_USER_INFO].[EDAD]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_USER_INFO]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USE_INF_FECHA_NAC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e9544244-01a5-4113-9d28-fd71b6993562" ChangeDateTime="08/30/2017 03:12:14">
+    <Property Name="ElementName" Value="[dbo].[TBL_USER_INFO].[USE_EMAIL]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_USER_INFO]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USE_INF_EMAIL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="56b995fe-1867-4bac-a995-5675a96c7380" ChangeDateTime="08/30/2017 03:17:08">
+    <Property Name="ElementName" Value="[dbo].[CAT_ROLE].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CAT_ROLE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ROL_INT_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2b053753-856b-4f1d-9c9a-9855c5dc25fb" ChangeDateTime="08/30/2017 03:17:56">
+    <Property Name="ElementName" Value="[dbo].[FK_CAT_ROLE_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CAT_ROLE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_CAT_ROLE_To_TBL_USER]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75bb711f-177a-4a5d-8fe9-31e7354e43fe" ChangeDateTime="08/30/2017 03:19:27">
+    <Property Name="ElementName" Value="[dbo].[FK_CAT_ROLE_To_TBL_USER]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CAT_ROLE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_CAT_ROLE_TBL_USER]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ac5a9a7c-6a55-47ce-9236-5475ca539b4d" ChangeDateTime="08/30/2017 03:21:00">
+    <Property Name="ElementName" Value="[dbo].[CAT_ROLE].[USE_INT_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CAT_ROLE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ROL_INT_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7e64d074-4216-4606-ac15-35ba7dfa2123" ChangeDateTime="08/30/2017 03:21:13">
+    <Property Name="ElementName" Value="[dbo].[TBL_USER].[USE_INT_ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TBL_USER]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ROL_INT_ID" />
+  </Operation>
+</Operations>

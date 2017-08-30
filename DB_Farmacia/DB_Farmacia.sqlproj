@@ -128,5 +128,28 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <Build Include="dbo\Tables\TBL_USER_INFO.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\CAT_ROLE.sql" />
+    <Build Include="dbo\Tables\TBL_PRODUCTO.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\CAT_PROVEEDOR.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\CAT_CATEGORIA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB_Farmacia.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DB_Farmacia.refactorlog" />
   </ItemGroup>
 </Project>
