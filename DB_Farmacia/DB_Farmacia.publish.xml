@@ -16,5 +16,6 @@
     <DropIndexesNotInSource>False</DropIndexesNotInSource>
     <DropExtendedPropertiesNotInSource>False</DropExtendedPropertiesNotInSource>
     <DropDmlTriggersNotInSource>False</DropDmlTriggersNotInSource>
+    <DropObjectsNotInSource>False</DropObjectsNotInSource>
   </PropertyGroup>
 </Project>

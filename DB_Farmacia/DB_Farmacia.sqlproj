@@ -132,7 +132,9 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="dbo\Tables\CAT_ROLE.sql" />
+    <Build Include="dbo\Tables\CAT_ROLE.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
     <Build Include="dbo\Tables\TBL_PRODUCTO.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
@@ -142,6 +144,14 @@
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
     <Build Include="dbo\Tables\CAT_TYPE_USER.sql" />
+    <Build Include="dbo\Tables\TBL_PEDIDO.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\TBL_FACTURA.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
   <ItemGroup>
     <None Include="DB_Farmacia.publish.xml" />
