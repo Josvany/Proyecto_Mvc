@@ -3,9 +3,11 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE [dbo].[SP_ALL_CAT]
+CREATE PROCEDURE SP_ALL_ROLE 
+
 AS
 BEGIN
-	SELECT CAT_INT_ID,CAT_NOMBRE,CAT_SYS_NAME 
-	FROM CAT_CATEGORIA
+	SET NOCOUNT ON;
+
+	SELECT ROL_INT_ID,ROL_NAME FROM CAT_ROLE
 END
