@@ -1,9 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<Capa_Datos.Orm.cls_Categorias>
+
+
+<!DOCTYPE html>
 <html>
 <head>
+    <title> Farmacia Muerte Lenta</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,15 +24,157 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Asistencia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Catálogos
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Empleados", "Index", "Empleados")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Profesores", "Index", "Profesores")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Tipo Justificación", "Index", "TipoJustificaciones")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Turnos", "Index", "Turnos")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Dias", "Index", "Dias")</li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operaciones
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Justificación del Personal", "Index", "JustificacionPersonal")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Registro de Marcas", "Index", "RegistroMarcas")</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Administración
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Registrar como nuevo usuario", "Register", "Account")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reportes
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Consulta de Empleados", "Index", "Query")</li>
+                            <li class="divider"></li>
+
+                            <li>@Html.ActionLink("Consulta de Empleados2", "Index2", "Query")</li>
+                            <li class="divider"></li>
+
+                            <li>@Html.ActionLink("Consulta de Empleados5", "Index5", "Query")</li>
+                        </ul>
+                    </li>
+
+
+
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+
+            </div>
+        </div>
+    </div><div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "navbar-brand " })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "active" })</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Categorias
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            @foreach (var item in Model)
+                            {
+                                <li><a href="#">@Html.DisplayFor(modelItem => item.CatNombreValue)</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operaciones
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Justificación del Personal", "Index", "JustificacionPersonal")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Registro de Marcas", "Index", "RegistroMarcas")</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Administración
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Registrar como nuevo usuario", "Register", "Account")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reportes
+                            <b class="caret"></b>
+                        </a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li>@Html.ActionLink("Consulta de Empleados", "Index", "Query")</li>
+                            <li class="divider"></li>
+
+                            <li>@Html.ActionLink("Consulta de Empleados2", "Index2", "Query")</li>
+                            <li class="divider"></li>
+
+                            <li>@Html.ActionLink("Consulta de Empleados5", "Index5", "Query")</li>
+                        </ul>
+                    </li>
+
+
+
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>
+
             </div>
         </div>
     </div>

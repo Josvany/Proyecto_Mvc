@@ -124,7 +124,7 @@
     <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Security\Permissions.sql" />
+    <None Include="Security\Permissions.sql" />
     <Build Include="dbo\Tables\TBL_USER.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
@@ -163,5 +163,11 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DB_Farmacia.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Stored Procedures\SP_Listar.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
 </Project>

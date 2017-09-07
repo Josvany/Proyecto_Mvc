@@ -58,7 +58,7 @@ namespace Capa_Datos.Orm
 
         public  List<cls_Categorias> Listar()
         {
-            Conexion.IniciarSesion(".","DB_Farmacia","sa","josvany");
+            Conexion.IniciarSesion(@"TXNICARAGUA\SQLEXPRESS", "DB_Farmacia","sa","josvany");
 
             var objCat = new List<cls_Categorias>();
 
@@ -69,7 +69,7 @@ namespace Capa_Datos.Orm
                 objCat.Add(new cls_Categorias
                 {
                     CatIntIdValue = (Guid)dt.Rows[i][0],
-                    CatNombreValue = dt.Rows[i][0].ToString()
+                    CatNombreValue = dt.Rows[i][1].ToString()
                 });
             }
             //if (dt.Rows.Count > 0)
