@@ -279,6 +279,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
+      <Project>{44bfd584-cf55-4e9a-a167-1eb7e35567f7}</Project>
+      <Name>Capa_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{af2ad48b-703b-4684-9bc8-f3b1f9c7e88d}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
