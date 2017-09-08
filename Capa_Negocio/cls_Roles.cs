@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
 
-namespace Capa_Negocio
+namespace Capa_Datos.Orm
 {
     public class cls_Roles
     {

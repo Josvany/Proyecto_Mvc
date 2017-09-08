@@ -77,7 +77,7 @@ namespace Capa_Datos.Orm
             //    objCat.CatIntIdValue = (Guid)dt.Rows[0][0];
             //    objCat.CatNombreValue = dt.Rows[0][1].ToString();
             //}
-
+            Conexion.FinalizarSesion();
             return objCat;
         }
 
