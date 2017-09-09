@@ -48,7 +48,6 @@ namespace Capa_Datos.Orm
 
         #endregion
 
-
         #region "Metodos"
         public void Create(cls_Categorias objCat)
         {
@@ -58,7 +57,7 @@ namespace Capa_Datos.Orm
 
         public  List<cls_Categorias> Listar()
         {
-            Conexion.IniciarSesion(@"TXNICARAGUA\SQLEXPRESS", "DB_Farmacia","sa","josvany");
+            Conexion.IniciarSesion(".", "DB_Farmacia","sa","josvany");
 
             var objCat = new List<cls_Categorias>();
 

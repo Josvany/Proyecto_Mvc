@@ -1,18 +1,23 @@
-﻿@model IEnumerable<Capa_Datos.Orm.cls_Categorias>
+﻿@*@model IEnumerable<Capa_Datos.Orm.cls_Categorias>*@
 
 @{
     
 }
 
 
-<table class="table" id="grid">
+<div class="info1">
+    
+</div>
+
+
+<table class="table" id="grid" style="display:none;">
     <thead>
         <tr>
             @*<th>
                     @Html.DisplayNameFor(model => model.IdEmpleado)
                 </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.CatNombreValue)
+                @*@Html.DisplayNameFor(model => model.CatNombreValue)*@
             </th>
             <th>
                 @*@Html.DisplayNameFor(model => model.Status)*@
@@ -33,14 +38,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
+        @*@foreach (var item in Model)
+        {*@
             <tr>
                 @*<td>
                         @Html.DisplayFor(modelItem => item.IdEmpleado)
                     </td>*@
                 <td>
-                    @Html.DisplayFor(modelItem => item.CatNombreValue)
+                    @*@Html.DisplayFor(modelItem => item.CatNombreValue)*@
                 </td>
                 <td>
                     @*@Html.DisplayFor(modelItem => item.Status)*@
@@ -64,7 +69,7 @@
                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
                 </td>
             </tr>
-        }
+        @*}*@
     </tbody>
 
 </table>

@@ -20,7 +20,7 @@ namespace Presentacion.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View(objCat.Listar());
         }
 
         public ActionResult Contact()

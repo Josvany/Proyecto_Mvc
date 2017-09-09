@@ -4,12 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Farmacia Muerte Lenta</title>
+    <title>Farmacia Muerte Lenta</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
 
     @Styles.Render("~/Content/css")
     @*@Scripts.Render("~/bundles/modernizr")*@
@@ -17,221 +16,41 @@
 </head>
 <body>
 
-
-    <div class="navbar navbar-nav navbar-fixed-top">
-
-        <div class="container">
-
-            <div class="navbar-collapse collapse">
-
-                <ul class="nav navbar-nav">
-
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Catálogos
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Empleados", "Index", "Empleados")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Profesores", "Index", "Profesores")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Tipo Justificación", "Index", "TipoJustificaciones")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Turnos", "Index", "Turnos")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Dias", "Index", "Dias")</li>
-                            <li class="divider"></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Operaciones
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Justificación del Personal", "Index", "JustificacionPersonal")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Registro de Marcas", "Index", "RegistroMarcas")</li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Administración
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Registrar como nuevo usuario", "Register", "Account")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
-                            <li class="divider"></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reportes
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Consulta de Empleados", "Index", "Query")</li>
-                            <li class="divider"></li>
-
-                            <li>@Html.ActionLink("Consulta de Empleados2", "Index2", "Query")</li>
-                            <li class="divider"></li>
-
-                            <li>@Html.ActionLink("Consulta de Empleados5", "Index5", "Query")</li>
-                        </ul>
-                    </li>
-
-
-
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @*@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "navbar-brand " })*@
+                <a class="navbar-brand logo" href="#">
+                    <img src="~/Images/logo.svg" alt="Muerte lenta">
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-
-
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" id="logo">
-                            <img src="~/Images/logo.svg" alt="Logo del sitio">
-                        </a>
-                    </li>
-                    <li>@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "active" })</li>
+            <div id="navbar3" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "active" })</li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Categorias
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            @foreach (var item in Model)
-                            {
-                                <li><a href="#">@Html.DisplayFor(modelItem => item.CatNombreValue)</a></li>
-                            }
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           @foreach (var item in Model)
+                           {
+                            <li><a href="#">@Html.DisplayFor(modelItem => item.CatNombreValue)</a></li>
+                           }
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Operaciones
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Justificación del Personal", "Index", "JustificacionPersonal")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Registro de Marcas", "Index", "RegistroMarcas")</li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Administración
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Registrar como nuevo usuario", "Register", "Account")</li>
-                            <li class="divider"></li>
-                            <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
-                            <li class="divider"></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reportes
-                            <b class="caret"></b>
-                        </a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li>@Html.ActionLink("Consulta de Empleados", "Index", "Query")</li>
-                            <li class="divider"></li>
-
-                            <li>@Html.ActionLink("Consulta de Empleados2", "Index2", "Query")</li>
-                            <li class="divider"></li>
-
-                            <li>@Html.ActionLink("Consulta de Empleados5", "Index5", "Query")</li>
-                        </ul>
-                    </li>
-
-
-
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                   
                 </ul>
-
             </div>
+            <!--/.nav-collapse -->
         </div>
-    </div>
-    <section class="bienvenidos">
+        <!--/.container-fluid -->
+    </nav>
 
-        <header class="encabezado navbar-fixed-top" role="banner" id="encabezado">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Logo del sitio">
-                </a>
-
-                <button type="button" class="boton-buscar" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="boton-menu hidden-md-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
-
-                <form action="#" id="bloque-buscar" class="collapse">
-                    <div class="contenedor-bloque-buscar">
-                        <input type="text" placeholder="Buscar...">
-                        <input type="submit" value="Buscar">
-                    </div>
-                </form>
-
-                <nav id="menu-principal" class="collapse">
-                    <ul>
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-        </header>
-
-
-        <div class="texto-encabezado text-xs-center">
-
-            <div class="container">
-                <h1 class="display-4 wow bounceIn">Diseño de APPS para empresas</h1>
-                <p class="wow bounceIn" data-wow-delay=".3s">Creamos aplicaciones según las necesidades y requerimientos de nuestros clientes.</p>
-                <a href="contacto.html" class="btn btn-primary btn-lg">Ponte en contacto</a>
-            </div>
-
-        </div>
-        <div class="flecha-bajar text-xs-center">
-            <a data-scroll href="#agencia"> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-        </div>
-    </section>
 
     <div class="container body-content">
         @RenderBody()
