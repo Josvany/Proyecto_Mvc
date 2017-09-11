@@ -17,5 +17,10 @@ namespace Presentacion.Controllers
         {
             return View(objCat.Listar());
         }
+
+        public ActionResult Action(Guid idus)
+        {
+            return View(objCat.Listar(idus));
+        }
     }
 }

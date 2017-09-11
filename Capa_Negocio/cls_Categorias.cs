@@ -80,6 +80,13 @@ namespace Capa_Datos.Orm
             return objCat;
         }
 
+
+        public cls_Categorias Listar(Guid idus)
+        {
+
+            return null;
+        }
+
         #endregion
     }
 }
